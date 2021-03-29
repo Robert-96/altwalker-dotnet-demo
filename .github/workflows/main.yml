@@ -22,9 +22,8 @@ jobs:
         java-version: 11
     - name: Set up AltWalker
       uses: Robert-96/altwalker-action@v1
-    - run: gw --version
-      shell: bash
-    - run: altwalker --version
+    - name: Build .NET project
+      run: dotnet build tests
       shell: bash
     - name: Check the models
       run: altwalker check -m models/default.json "random(vertex_coverage(100))"
