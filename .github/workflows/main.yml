@@ -12,7 +12,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.9'
-    - name: Setup .NET 2.1
+    - name: Set up .NET 2.1
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '2.1'
@@ -21,7 +21,7 @@ jobs:
       with:
         java-version: 11
     - name: Set up AltWalker
-      uses: Robert-96/altwalker-action@v1
+      uses: Robert-96/altwalker-action@v2
     - name: Build .NET project
       run: dotnet build tests
       shell: bash
