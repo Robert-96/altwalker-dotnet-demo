@@ -1,1 +1,1 @@
-altwalker
+altwalker==0.4.0
