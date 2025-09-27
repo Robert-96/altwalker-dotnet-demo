@@ -7,6 +7,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Install libssl-dev
+      run: apt install libssl-dev
+        
     - name: Setup AltWalker
       uses: altwalker/setup-altwalker@main
 
