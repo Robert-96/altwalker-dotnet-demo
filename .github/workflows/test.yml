@@ -7,11 +7,14 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Install libssl-dev
+      run: sudo apt-get install libssl-dev
+        
     - name: Setup AltWalker
       uses: altwalker/setup-altwalker@main
 
     - name: Set up .NET 2.1
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: '2.1'
 
